@@ -1,0 +1,9 @@
+@import '~antd/dist/antd.css';
+@import './color.scss';
+
+.root {
+  color: $purple;
+  width: 100px;
+  height: 100px;
+  background-color: antiquewhite;
+}
