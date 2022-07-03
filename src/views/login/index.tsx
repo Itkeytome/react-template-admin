@@ -1,5 +1,7 @@
+import '../../design/style/login.scss'
+
 const Login = () => {
-  return <div>登录页面</div>;
+  return <div className='login'>登录页面</div>;
 };
 
 export default Login;
