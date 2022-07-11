@@ -1,5 +1,25 @@
+@import '../variable/color.scss';
+@import '../variable/mixin.scss';
+
 .login {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-color: aqua;
+  background-color: $backgroundColor;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 410px;
+  height: 410px;
+  background-color: $boxColor;
+  border-radius: 90px;
+  @include bugle;
 }
