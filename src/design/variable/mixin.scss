@@ -1,0 +1,13 @@
+@import "./color.scss";
+
+// 凸起
+@mixin bugle {
+  border-radius: 90px;
+  background: linear-gradient(315deg, #d0d3dc, #f7faff);
+  box-shadow: $blackShadow, $whiteShadow;
+}
+
+// 凹陷
+@mixin hollow {
+  box-shadow: inset $blackShadow, inset $whiteShadow;
+}
