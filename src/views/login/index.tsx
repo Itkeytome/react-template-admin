@@ -6,6 +6,8 @@ import React, { useState } from "react";
 const Login: React.FC = () => {
   // state
   const [registerFlag, handlerRegisterFlag] = useState(false);
+  const [username, onUsernameChange] = useState("");
+  const [password, onPasswordChange] = useState("");
 
   const onFinish = (values: any) => {
     console.log("Success:", values);
@@ -16,10 +18,11 @@ const Login: React.FC = () => {
   };
 
   const onUserRegister = () => {
-    console.log(1);
-    if (registerFlag) {
-    } else {
-    }
+    handlerRegisterFlag(!registerFlag);
+    onUsernameChange("12311");
+    onPasswordChange("");
+    console.log(username);
+    console.log(password);
   };
 
   return (
@@ -44,6 +47,8 @@ const Login: React.FC = () => {
               <Input
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Username"
+                value={username}
+                onChange={(event) => onUsernameChange(event.target.value)}
               />
             </Form.Item>
             <Form.Item
@@ -53,14 +58,16 @@ const Login: React.FC = () => {
               ]}
             >
               <Input
+                value={password}
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
                 placeholder="Password"
+                onChange={(event) => onPasswordChange(event.target.value)}
               />
             </Form.Item>
             {registerFlag && (
               <Form.Item
-                name="password"
+                name="duplicatePassword"
                 rules={[
                   { required: true, message: "Please input your Password!" },
                 ]}
@@ -68,7 +75,9 @@ const Login: React.FC = () => {
                 <Input
                   prefix={<LockOutlined className="site-form-item-icon" />}
                   type="password"
+                  value={password}
                   placeholder="duplicate password"
+                  onChange={(event) => onPasswordChange(event.target.value)}
                 />
               </Form.Item>
             )}
@@ -92,7 +101,7 @@ const Login: React.FC = () => {
             <Form.Item>
               <Button
                 className="login-form-button"
-                onClick={() => handlerRegisterFlag(!registerFlag)}
+                onClick={() => onUserRegister()}
               >
                 {registerFlag ? "Log in" : "Sign up"}
               </Button>
