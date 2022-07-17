@@ -8,8 +8,8 @@ const App: FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/" element={<Login />}></Route>
         <Route path="/home" element={<Index />}></Route>
         <Route path="/index" element={<Index />}></Route>
         <Route path="*" element={<Exception />}></Route>

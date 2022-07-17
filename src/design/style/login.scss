@@ -1,5 +1,5 @@
-@import '../variable/color.scss';
-@import '../variable/mixin.scss';
+@import "../variable/color.scss";
+@import "../variable/mixin.scss";
 
 .login {
   position: relative;
@@ -9,17 +9,40 @@
 }
 
 .login-box {
+  padding: 0 30px;
   position: absolute;
   top: 50%;
   right: 10%;
   transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
   width: 410px;
   height: 410px;
   background-color: $boxColor;
   border-radius: 90px;
   @include bugle;
+
+  .login-box__main {
+    padding: 10px 0;
+    @include flexCenter;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .login-form {
+    min-width: 300px;
+  }
+
+  .login-form-forgot {
+    float: right;
+  }
+
+  .ant-col-rtl .login-form-forgot {
+    float: left;
+  }
+
+  .login-form-button {
+    width: 100%;
+  }
 }
