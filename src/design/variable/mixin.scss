@@ -11,3 +11,11 @@
 @mixin hollow {
   box-shadow: inset $blackShadow, inset $whiteShadow;
 }
+
+// flex布局居中
+@mixin flexCenter($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
