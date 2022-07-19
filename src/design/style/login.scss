@@ -22,27 +22,6 @@
 
   .login-box__main {
     padding: 10px 0;
-    @include flexCenter;
   }
 
-  .title {
-    text-align: center;
-    font-size: 22px;
-  }
-
-  .login-form {
-    min-width: 300px;
-  }
-
-  .login-form-forgot {
-    float: right;
-  }
-
-  .ant-col-rtl .login-form-forgot {
-    float: left;
-  }
-
-  .login-form-button {
-    width: 100%;
-  }
 }
