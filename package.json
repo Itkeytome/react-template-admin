@@ -46,7 +46,23 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.20.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "node-sass": "^7.0.1",
+    "prettier": "^2.7.1",
     "webpack-merge": "^5.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**": [
+      "prettier --config .prettierrc --write",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
